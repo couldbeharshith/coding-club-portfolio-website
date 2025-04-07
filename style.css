@@ -1,0 +1,115 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #e0f2f1, #fce4ec);
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #42a5f5, #ec407a);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 150%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent);
+    animation: rotateGlow 10s linear infinite;
+    z-index: 0;
+}
+header * {
+    position: relative;
+    z-index: 1;
+}
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    animation: fadeInDown 1s ease;
+}
+header h3 {
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ec407a;
+}
+section {
+    padding: 3rem 2rem;
+}
+section h2 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #42a5f5, #ec407a);
+    background-clip: text;        
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+ul li {
+    margin-bottom: 0.5rem;
+}
+.project, .event {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 4px solid #42a5f5;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+.project:hover, .event:hover {
+    transform: translateY(-5px);
+}
+.badge {
+    margin: 5px;
+    font-size: 0.95rem;
+}
+.contact-card {
+    background: linear-gradient(135deg, #64b5f6, #f06292);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+}
+.contact-card form {
+    max-width: 500px;
+    margin: 2rem auto 0;
+}
+.contact-card input, .contact-card textarea {
+    margin-bottom: 1rem;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes rotateGlow {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}
